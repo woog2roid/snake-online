@@ -1,0 +1,73 @@
+body {
+    margin: 0px;
+    width: 100%;
+    position:absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+}
+header{
+    font-weight: bold;
+}
+nav li{
+    display: inline;
+}
+footer {
+    font-weight: lighter;
+}
+footer a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Mobile Device (가로폭 767px 이하) */
+@media all and (max-width:767px) {
+    header{
+        font-size: 25px;
+    }
+    nav {
+        font-size: 15px;
+    }
+    footer {
+        font-size: 10px;
+    }
+    footer img {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Tablet (가로폭 768px 이상, 1023px 이하) */
+@media all and (min-width:768px) and (max-width:1023px) {
+    header{
+        font-size: 50px;
+    }
+    nav {
+        font-size: 20px;
+    }
+    footer {
+        font-size: 15px;
+    }
+    footer img {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* PC Desktop (가로폭 1024 이상) */
+@media all and (min-width:1024px) {
+    header{
+        font-size: 60px;
+    }
+    nav {
+        font-size: 25px;
+    }
+    footer {
+        font-size: 20px;
+    }
+    footer img {
+        width: 20px;
+        height: 20px;
+    }
+}
