@@ -25,6 +25,15 @@ table {
     margin: auto;
     border-color: black;
 }
+#up {
+    transform: rotate( 90deg );
+}
+#down {
+    transform: rotate( 270deg );
+}
+#right {
+    transform: rotate( 180deg );
+}
 
 /* Mobile Device (가로폭 767px 이하) */
 @media all and (max-width:767px) {
@@ -35,16 +44,35 @@ table {
         font-size: 15px;
     }
     footer {
-        font-size: 10px;
+        font-size: 13px;
     }
     footer img {
-        width: 10px;
-        height: 10px;
+        width: 13px;
+        height: 13px;
+    }
+    td {
+        height: 7px;
+        width: 7px;
+        border-radius: 3px;
+    }
+    .arrow {
+        width: 40px; 
+        height: 40px;
+    }
+    #controller{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #left {
+        margin-right: 20px;
+    }
+    #right {
+        margin-left: 20px;
     }
 }
 
-/* Tablet (가로폭 768px 이상, 1023px 이하) */
-@media all and (min-width:768px) and (max-width:1023px) {
+/* Tablet (가로폭 768px 이상, 1080px 이하) */
+@media all and (min-width:768px) and (max-width:1080px) {
     header{
         font-size: 50px;
     }
@@ -58,10 +86,29 @@ table {
         width: 12px;
         height: 12px;
     }
+    td {
+        height: 15px;
+        width: 15px;
+        border-radius: 3px;
+    }
+    .arrow {
+        width: 80px; 
+        height: 60px;
+    }
+    #controller{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    #left {
+        margin-right: 20px;
+    }
+    #right {
+        margin-left: 20px;
+    }
 }
 
-/* PC Desktop (가로폭 1024 이상) */
-@media all and (min-width:1024px) {
+/* PC Desktop (가로폭 1081 이상) */
+@media all and (min-width:1081px) {
     header{
         font-size: 60px;
     }
@@ -76,8 +123,11 @@ table {
         height: 20px;
     }
     td {
-       height: 10px;
-        width: 10px;
+        height: 20px;
+        width: 20px;
         border-radius: 3px;
+    }
+    .arrow {
+        display: none;
     }
 }

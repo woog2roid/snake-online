@@ -91,6 +91,23 @@ document.onkeydown = (e) => {
     else if (e.key == "ArrowLeft" && (direction[0] != 0 && direction[1] != 1)) direction = [0, -1];
     else if (e.key == "ArrowRight" && (direction[0] != 0 && direction[1] != -1)) direction = [0, 1];
 }
+const up = document.getElementById("up");
+const down = document.getElementById("down");
+const left = document.getElementById("left");
+const right = document.getElementById("right");
+up.onclick = () => {
+    if (direction[0] != 1 && direction[1] != 0) direction = [-1, 0];
+}
+down.onclick = () => {
+    if (direction[0] != -1 && direction[1] != 0) direction = [1, 0];
+}
+left.onclick = () => {
+    if (direction[0] != 0 && direction[1] != 1) direction = [0, -1];
+}
+right.onclick = () => {
+    if (direction[0] != 0 && direction[1] != -1) direction = [0, 1];
+}
+
 //뱀 먹이 구현:
 //맵에서 랜덤으로 생성됨 + 색은 빨간색
 function createFeed() {
