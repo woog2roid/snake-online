@@ -6,6 +6,7 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: black;
+    align-content: center;
 }
 header{
     font-weight: bold;
@@ -19,6 +20,10 @@ footer {
 footer a {
     text-decoration: none;
     vertical-align: middle;
+}
+table {
+    margin: auto;
+    border-color: black;
 }
 
 /* Mobile Device (가로폭 767px 이하) */
@@ -69,5 +74,10 @@ footer a {
     footer img {
         width: 20px;
         height: 20px;
+    }
+    td {
+       height: 10px;
+        width: 10px;
+        border-radius: 3px;
     }
 }
