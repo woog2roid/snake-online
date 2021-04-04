@@ -10,6 +10,9 @@ router.get('/join', (req, res) => {
 router.get('/login', (req, res) => {
     res.render('login.html');
 });
+router.get('/mypage', (req, res) => {
+    res.render('mypage.html');
+})
 
 
 module.exports = router;
