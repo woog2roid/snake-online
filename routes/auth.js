@@ -2,11 +2,11 @@ const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
 const User = require('../models/user');
-const { Router } = require('express');
+const { isLoggedIn, isNotLoggedIn } = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.post('/join', async (req, res, next) => {
+router.post('/join', isNotLoggedIn, async (req, res, next) => {
     const { id, password, nickname } = req.body;
     try {
         const isUnique = await User.findOne({ where: {id} });
@@ -24,14 +24,14 @@ router.post('/join', async (req, res, next) => {
     }
 });
 
-router.post('/login', (req, res, next) => {
-    passport.authenticate('local', (authError, user, info) => {
-        if (authEror) {
+router.post('/login', isNotLoggedIn, (req, res, next) => {
+    passport.authenticate('local', (authError, user) => {
+        if (authError) {
             console.error(authError);
             return next(authError);
         }
         if (!user) {
-            return res.redirect('/loginError');
+            return res.redirect('/login?error=login%20fail');
         }
         return req.login(user, (loginError) => {
             if (loginError) {
@@ -43,7 +43,7 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
-router.get('/logout', (req, res) => {
+router.get('/logout', isLoggedIn, (req, res) => {
     req.logout();
     req.session.destroy();
     req.redirect('/');

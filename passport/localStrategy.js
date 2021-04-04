@@ -7,20 +7,23 @@ module.exports = () => {
     passport.use(new LocalStrategy({
         usernameField: 'id',
         passwordField: 'password',
-    }, async (email, password, done) => {
+    }, async (id, password, done) => {
         try {
-            const user = await User.findeOne({ where: { id } });
+            const user = await User.findOne({ where: { id } });
+            console.log(user);
+            console.log(password);
             if (user) {
                 const result = await bcrypt.compare(password, user.password);
+                console.log(result);
                 if (result) done(null, user);
-                else done(null, false, { message: '비밀번호가 일치하지 않습니다.' });
+                else done(null, false);
             }
             else {
-                done(null, false, { message: '가입되지 않은 회원입니다.' });
+                done(null, false);
             }
         } catch (error) {
             console.error(error);
             done(error);
         }
     }));
-}
+};
