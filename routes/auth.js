@@ -9,8 +9,8 @@ const router = express.Router();
 router.post('/join', isNotLoggedIn, async (req, res, next) => {
     const { id, password, nickname } = req.body;
     try {
-        const isUnique = await User.findOne({ where: {id} });
-        if (isUnique) {
+        const exUser = await User.findOne({ where: {id} });
+        if (exUser) {
             return res.redirect('/join?error=exist');
         }
         const hash = await bcrypt.hash(password, 12);

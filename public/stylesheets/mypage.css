@@ -1,0 +1,117 @@
+#wrapper {
+    margin: 0px;
+    width: 100%;
+    position:absolute;
+    top:50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    align-content: center;
+}
+header{
+    font-weight: bold;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}
+footer {
+    font-weight: lighter;
+}
+footer a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* Mobile Device (가로폭 767px 이하) */
+@media all and (max-width:767px) {
+    header{
+        font-size: 25px;
+    }
+    header div {
+        font-size: 18px;
+    }
+    footer {
+        font-size: 13px;
+    }
+    footer img {
+        width: 13px;
+        height: 13px;
+    }
+    form input {
+        margin-bottom: 10px;
+        width:200px;
+        height:25px;
+        font-size: 16px;
+    }
+    form button {
+        margin-bottom: 8px;
+        width: 80px;
+        height: 30px;
+    }
+    form div {
+        font-size: 15px;
+    }
+}
+
+/* Tablet (가로폭 768px 이상, 1080px 이하) */
+@media all and (min-width:768px) and (max-width:1080px) {
+    header{
+        font-size: 50px;
+    }
+    header div {
+        font-size: 30px;
+    }
+    footer {
+        font-size: 15px;
+    }
+    footer img {
+        width: 12px;
+        height: 12px;
+    }
+    form input {
+        margin-bottom: 10px;
+        width:200px;
+        height:30px;
+        font-size: 16px;
+    }
+    form button {
+        margin-bottom: 8px;
+        width: 80px;
+        height: 30px;
+    }
+    form div {
+        font-size: 20px;
+    }
+}
+
+/* PC Desktop (가로폭 1081 이상) */
+@media all and (min-width:1081px) {
+    header{
+        font-size: 60px;
+    }
+    header div {
+        font-size: 40px;
+    }
+    footer {
+        font-size: 20px;
+    }
+    footer img {
+        width: 20px;
+        height: 20px;
+    }
+    form input {
+        margin-bottom: 15px;
+        width:300px;
+        height:50px;
+        font-size: 16px;
+    }
+    form button {
+        margin-bottom: 10px;
+        width: 80px;
+        height: 30px;
+    }
+    form div {
+        font-size: 20px;
+    }
+}

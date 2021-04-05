@@ -4,34 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./stylesheets/index.css" rel="stylesheet">
-    <script type="text/javascript" src="./scripts/index/game.js" async></script>
-    <script type="text/javascript" src="./scripts/index/member.js" async></script>
-    <title>Simple Game</title>
+    <link href="./stylesheets/mypage.css" rel="stylesheet">
+    <title>로그인</title>
 </head>
 <body>
     <div id="wrapper">
         <header>
-            스네이크 온라인
+            <a href = "/">스네이크 온라인</a>
+            <div>마이페이지</div>
         </header>
-        <nav>
-            <div>
-                <li id="join"><a href="/join">회원가입</a></li> 
-                <li id="login"><a href="/login">로그인</a></li>
-            </div>
-            <div>
-                <li id="mypage"><a href="/mypage">마이페이지</a></li>
-                <li id="logout"><a href="logout">로그아웃</a></li>
-            </div>
-        </nav>
-        <div id="game"></div>
-        <div id="controller">
-            <img id="up" class="arrow" src = './images/arrow.svg' />
-            </br>
-            <img id="left" class="arrow" src = './images/arrow.svg' />
-            <img id="right" class="arrow" src = './images/arrow.svg' />
-            </br>
-            <img id="down" class="arrow" src = './images/arrow.svg' />
+        <div>
+            <form action="/mypage" method="POST">
+                <div>별명</div>
+                <input type="text" size="14" placeholder="별명" name ="nickname" value="{{user.nickname}}"autofocus required></br>
+                <div>한줄 소개</div>
+                <input type="text" size = "14" placeholder="한줄 소개" name="comment" value="{{user.comment}}"autofocus required></br>
+                <button>수정하기</button>
+            </form>
         </div>
         <footer>
             Made by woog2roid 
