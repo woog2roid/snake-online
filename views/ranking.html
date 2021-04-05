@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./stylesheets/ranking.css" rel="stylesheet">
+    <title>랭킹</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <a href = "/">스네이크 온라인</a>
+            <div>랭킹</div>
+        </header>
+        <div id="ranking">
+            {% for game in games%}
+            <div id="card">
+                <div id="score">{{game.score}}</div>
+                <div id="user">{{game.User.nickname}}: "{{game.User.comment}}"</div>
+            </div>
+            {% endfor %} 
+        </div>
+        <footer>
+            Made by woog2roid 
+            <a href='https://github.com/woog2roid' target='_blank'>
+                <img src = './images/github.svg' />
+            </a>
+        </footer>
+    </div>
+</body>
+</html>

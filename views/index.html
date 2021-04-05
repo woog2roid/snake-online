@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./stylesheets/index.css" rel="stylesheet">
     <script type="text/javascript" src="./scripts/index/game.js" async></script>
-    <script type="text/javascript" src="./scripts/index/index.js" async></script>
     <title>스네이크 온라인</title>
 </head>
 <body>
@@ -16,16 +15,13 @@
         </header>
         <nav>
             {% if isAuthenticated %}
-            <div id="guest">
-                <li id="mypage"><a href="/mypage">마이페이지</a></li>
-                <li id="logout"><a href="logout">로그아웃</a></li>
-            </div>
+            <li id="mypage"><a href="/mypage">마이페이지</a></li>
+            <li id="logout"><a href="logout">로그아웃</a></li>
             {% else %}
-            <div id="member">
-                <li id="join"><a href="/join">회원가입</a></li> 
-                <li id="login"><a href="/login">로그인</a></li>
-            </div>
+            <li id="join"><a href="/join">회원가입</a></li> 
+            <li id="login"><a href="/login">로그인</a></li>
             {% endif %}
+            <li id="ranking"><a href="/ranking">랭킹</a></li>
         </nav>
         <div id="game"></div>
         <div id="controller">

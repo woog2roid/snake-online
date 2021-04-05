@@ -2,6 +2,7 @@ const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares/auth');
 const router = express.Router();
 const User = require('../models/user');
+const Game = require('../models/game');
 
 router.post('/mypage', isLoggedIn, async (req, res, next) => {
     const { nickname, comment } = req.body;
@@ -22,6 +23,5 @@ router.post('/mypage', isLoggedIn, async (req, res, next) => {
         return next(error);
     }
 });
-
 
 module.exports = router;

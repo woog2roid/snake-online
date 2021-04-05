@@ -1,4 +1,4 @@
-// 상수 선언
+// 상수, 변수 선언
 const Y = 20, X = 30;
 const startY = 9, startX = 14;
 const SPEED = 50;
@@ -68,6 +68,7 @@ function moveSnake() {
         table = document.getElementById(`${snake[0][0]} ${snake[0][1]}`);
 
         if (table.style.background == "blue") {//게임이 끝날 때,
+            uploadScore();
             alert("게임 오버");
             initialize();
             return;
@@ -116,4 +117,20 @@ function createFeed() {
     feed = [feedY, feedX];
     let table = document.getElementById(`${feed[0]} ${feed[1]}`);
     table.style.background = "red";
+}
+
+//점수 POST 구현:
+function uploadScore() {
+    let form = document.createElement("form");
+    form.setAttribute("method", "POST");
+    form.setAttribute("action", '/');
+
+    let hiddenField = document.createElement("input");
+    hiddenField.setAttribute("type", "hidden");
+    hiddenField.setAttribute("name", "score");
+    hiddenField.setAttribute("value", score);
+    form.appendChild(hiddenField);
+ 
+    document.body.appendChild(form);
+    form.submit();
 }

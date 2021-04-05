@@ -1,6 +1,7 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares/auth');
 const router = express.Router();
+const { User, Game } = require('../models');
 
 router.use((req, res, next) => {
     res.locals.isAuthenticated = req.isAuthenticated();
@@ -19,6 +20,25 @@ router.get('/login', isNotLoggedIn, (req, res) => {
 });
 router.get('/mypage', isLoggedIn, (req, res) => {
     res.render('mypage.html');
+});
+router.get('/ranking', async (req, res, next) => {
+    try {
+        const games = await Game.findAll({
+            include: {
+                model: User,
+                attributes: ['id', 'nickname', 'comment'],
+            },
+            order: [['score', 'DESC']],
+            limit: 10,
+        });
+
+        res.render('ranking.html', {
+            games: games,
+        });
+    } catch (err) {
+        console.error(err);
+        next(err);
+    }
 });
 
 module.exports = router;

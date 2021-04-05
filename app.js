@@ -12,6 +12,7 @@ const { sequelize } = require('./models');
 const pageRouter = require('./routes/page');
 const authRouter = require('./routes/auth');
 const userRouter = require('./routes/user');
+const rankRouter = require('./routes/rank')
 const passportConfig = require('./passport');
 
 const app = express();
@@ -52,6 +53,7 @@ app.use(passport.session());
 app.use('/', pageRouter);
 app.use('/', authRouter);
 app.use('/', userRouter);
+app.use('/', rankRouter);
 
 app.listen(app.get('port'), () => {
   console.log(app.get('port'), '번 포트에서 대기중');
