@@ -80,7 +80,7 @@ function moveSnake() {
 
         table.style.background = "blue";
         table = document.getElementById(`${snake[snake.length - 1][0]} ${snake[snake.length - 1][1]}`);
-        table.style.background = "none";
+        if(table.style.background !== "red") table.style.background = "none";
         snake.pop();
     }, SPEED)
 }
