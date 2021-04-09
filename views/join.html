@@ -16,11 +16,17 @@
         </header>
         <div>
             <form action="/join" method="POST">
-                <input id = "id" type= "text" size = "14" placeholder = "아이디(최대 15자)" name = "id" maxlength="15" autofocus required></br>
+                <input id = "id" type= "text" size = "14" placeholder = "아이디 (최대 15자)" name = "id" maxlength="15" autofocus required></br>
                 <input id = "password" type= "password" size = "14" placeholder = "비밀번호" name = "password" autofocus required></br>
-                <input id = "nickname" type= "text" size = "14" placeholder = "별명(최대 30자)" name = "nickname" maxlength="30" autofocus required></br>
+                <input id = "nickname" type= "text" size = "14" placeholder = "별명 (최대 30자)" name = "nickname" maxlength="30" autofocus required></br>
                 <button>회원가입</button>                
             </form>
+            <div id = "warning">
+                bcrypt로 암호화 과정을 거쳐 서버에 비밀번호를 저장합니다.</br>
+                (비밀번호의 원문은 절대 저장하지 않습니다.)<br>
+                다만, HTTPS 보안은 적용되지 않기 때문에,<br>
+                외부 사이트와 같은 비밀번호를 이용하는 것은 추천드리지 않습니다.
+            </div>
         </div>
         <footer>
             Made by woog2roid 
