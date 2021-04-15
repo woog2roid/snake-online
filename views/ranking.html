@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./stylesheets/ranking.css" rel="stylesheet">
+    <script type="text/javascript" src="./scripts/ranking/ranking.js" async></script>
     <title>랭킹</title>
 </head>
 <body>
@@ -20,6 +21,11 @@
                 <div id="user">{{game.User.nickname}}: "{{game.User.comment}}"</div>
             </div>
             {% endfor %} 
+        </div>
+        <div id="page">
+            <span id="prev_page">&#60;</span>
+            <span>{{page}}</span>
+            <span id="next_page">&#62;</span>
         </div>
         <footer>
             Made by woog2roid 

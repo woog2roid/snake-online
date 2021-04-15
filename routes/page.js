@@ -23,17 +23,20 @@ router.get('/mypage', isLoggedIn, (req, res) => {
 });
 router.get('/ranking', async (req, res, next) => {
     try {
+        const page = req.query.page;
         const games = await Game.findAll({
             include: {
                 model: User,
                 attributes: ['id', 'nickname', 'comment'],
             },
             order: [['score', 'DESC']],
-            limit: 10,
+            limit: 5,
+            offset: (page - 1) * 5,
         });
 
         res.render('ranking.html', {
             games: games,
+            page: page,
         });
     } catch (err) {
         console.error(err);

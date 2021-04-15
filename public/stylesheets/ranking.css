@@ -56,6 +56,9 @@ footer a {
     #user {
         font-size: 10px;
     }
+    #page {
+        font-size: 14px;
+    }
 }
 
 /* Tablet (가로폭 768px 이상, 1080px 이하) */
@@ -84,6 +87,9 @@ footer a {
     #user {
         font-size: 20px;
     }
+    #page {
+        font-size: 18px;
+    }
 }
 
 /* PC Desktop (가로폭 1081 이상) */
@@ -111,5 +117,8 @@ footer a {
     }
     #user {
         font-size: 15px;
+    }
+    #page {
+        font-size: 20px;
     }
 }
