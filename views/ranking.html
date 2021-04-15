@@ -23,9 +23,13 @@
             {% endfor %} 
         </div>
         <div id="page">
+            {% if page != 1%}
             <span id="prev_page">&#60;</span>
+            {% endif %}
             <span>{{page}}</span>
+            {% if page * 5 < count %}
             <span id="next_page">&#62;</span>
+            {% endif %}
         </div>
         <footer>
             Made by woog2roid 

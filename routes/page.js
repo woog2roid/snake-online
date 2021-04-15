@@ -2,6 +2,7 @@ const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares/auth');
 const router = express.Router();
 const { User, Game } = require('../models');
+const { count } = require('../models/user');
 
 router.use((req, res, next) => {
     res.locals.isAuthenticated = req.isAuthenticated();
@@ -33,10 +34,12 @@ router.get('/ranking', async (req, res, next) => {
             limit: 5,
             offset: (page - 1) * 5,
         });
+        const count = await Game.count();
 
         res.render('ranking.html', {
-            games: games,
             page: page,
+            games: games,
+            count: count,
         });
     } catch (err) {
         console.error(err);
