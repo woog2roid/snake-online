@@ -1,7 +1,7 @@
 // 상수, 변수 선언
-const Y = 20, X = 30;
+const Y = 15, X = 20;
 const startY = 9, startX = 14;
-const SPEED = 50;
+const SPEED = 80;
 let score = 0;
 let feed;
 let snake;
