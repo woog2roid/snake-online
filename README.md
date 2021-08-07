@@ -3,13 +3,7 @@
 
 ### 실행화면
 
-<img src="https://user-images.githubusercontent.com/54667577/128601524-af5dbf9c-d99a-45d4-b709-5f237165887c.PNG" width="50%" height="50%"/>
-
-<img src="https://user-images.githubusercontent.com/54667577/128601526-7c672fde-4d06-4680-b7d7-9860aa357224.PNG" width="50%" height="50%"/>
-
-<img src="https://user-images.githubusercontent.com/54667577/128601527-b323e72e-def2-45f2-904c-1f780052ba1a.PNG" width="50%" height="50%"/>
-
-<img src="https://user-images.githubusercontent.com/54667577/128601529-de8b7c5f-0257-4312-8c27-326aeaa270e1.PNG" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/54667577/128602162-5d179f5e-508c-4bab-9b31-f1285c6a7c8e.gif" width="50%" height="50%"/>
 
 <details>
 <summary>개발하며 느낀 점...</summary>
