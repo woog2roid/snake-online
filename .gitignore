@@ -117,3 +117,6 @@ dist
 
 # config for sequelize
 config/
+
+#goorm
+goorm.manifest

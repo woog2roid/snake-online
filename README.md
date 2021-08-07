@@ -1,6 +1,16 @@
 # snake-online
 스네이크 게임을 만들고 카카오 게임즈처럼 회원가입을 통해서 상위 랭킹을 보여줄 수 있도록 구현해보는 프로젝트
 
+### 실행화면
+
+<img src="https://user-images.githubusercontent.com/54667577/128601524-af5dbf9c-d99a-45d4-b709-5f237165887c.PNG" width="50%" height="50%"/>
+
+<img src="https://user-images.githubusercontent.com/54667577/128601526-7c672fde-4d06-4680-b7d7-9860aa357224.PNG" width="50%" height="50%"/>
+
+<img src="https://user-images.githubusercontent.com/54667577/128601527-b323e72e-def2-45f2-904c-1f780052ba1a.PNG" width="50%" height="50%"/>
+
+<img src="https://user-images.githubusercontent.com/54667577/128601529-de8b7c5f-0257-4312-8c27-326aeaa270e1.PNG" width="50%" height="50%"/>
+
 <details>
 <summary>개발하며 느낀 점...</summary>
 <div markdown="1">
